@@ -11,6 +11,8 @@
         android:id="@+id/viewFlipper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:outAnimation="@anim/updown_hide"
+        android:inAnimation="@anim/updown_show"
         >
         <LinearLayout
             android:layout_width="wrap_content"
