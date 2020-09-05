@@ -22,8 +22,19 @@ public class F1 extends Fragment {
         View f2 = viewFlipper.getChildAt(1);
         View f3 = viewFlipper.getChildAt(2);
         View f4 = viewFlipper.getChildAt(3);
-
+        FListener flistener = new FListener();
+        f1.setOnClickListener(flistener);
+        f2.setOnClickListener(flistener);
+        f3.setOnClickListener(flistener);
+        f4.setOnClickListener(flistener);
 
         return mainView;
+    }
+
+    private class FListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            viewFlipper.showNext();
+        }
     }
 }
